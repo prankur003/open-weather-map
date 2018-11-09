@@ -7,19 +7,19 @@ Download '**_Vagrantfile_**'.
 Pre-requisites  \
 Git \
 Vagrant \
-Virtualbox 
+Virtualbox \
+java "1.8.0_161" or Higher version
 
-Java : java -version \
-java version "1.8.0_161"
-
+# Setup Virtual machine
+Run Below commands in the folder where '**_Vagrantfile_**' is located
 ```
 vagrant up
 vagrant ssh
 ```
 
-If you does not see '**_open-weather-map_**' folder then follow below steps
+List and Search for '**_open-weather-map_**' If you does not see '**_open-weather-map_**' folder then follow below steps
 ```
-git clone 
+git clone https://github.com/prankur003/open-weather-map.git
 cd open-weather-map
 npm install
 npm run e2e-test -- --env chrome
@@ -40,13 +40,12 @@ sudo apt-get install google-chrome-stable
 
 # Run Test
 
-Execute single feature file
+Command to Execute single feature file
 ```
-./node_modules/gulp-v4/bin/gulp.js singleFile --option features/web/acceptanceCriteria.feature; ./node_modules/gulp-v4/bin/gulp.js cucumberReports
+./node_modules/gulp-v4/bin/gulp.js singleFile --option features/web/acceptanceCriteria.feature
 ```
-OR
 
-Execute all tests using command for selected group
+Command to generate report
 ```
-./node_modules/gulp-v4/bin/gulp.js alltask --env chrome_web --group web --option web; ./node_modules/gulp-v4/bin/gulp.js cucumberReports
+./node_modules/gulp-v4/bin/gulp.js cucumberReports
 ```

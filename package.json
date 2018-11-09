@@ -1,0 +1,27 @@
+{
+    "name": "open-weather-map-framework",
+    "version": "1.0.0",
+    "description": "This is Automation Framework for open weather map and it works with Chrome browser for Web platform. This Framework has built-in support for BDD and page object model.",
+    "main": "nightwatch.conf.js",
+    "scripts": {
+        "e2e-test": "nightwatch",
+        "e2e-test:singleFile": "node_modules/gulp-v4/bin/gulp.js singleFile; node_modules/gulp-v4/bin/gulp.js cucumberReports",
+        "e2e-test:report": "node_modules/gulp-v4/bin/gulp.js cucumberReports",
+        "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome_web"
+    },
+    "author": "Prankur kulshrestha <prankur003@gmail.com>",
+    "license": "",
+    "dependencies": {
+        "chromedriver": "^2.36.0",
+        "cucumber": "^4.0.0",
+        "cucumber-pretty": "^1.4.0",
+        "geckodriver": "^1.11.0",
+        "gulp-shell": "^0.6.5",
+        "gulp-v4": "^4.0.0-alpha.5",
+        "multiple-cucumber-html-reporter": "^1.10.0",
+        "nightwatch": "^0.9.20",
+        "nightwatch-cucumber": "^9.1.2",
+        "npm": "^5.8.0",
+        "selenium-server": "^3.10.0"
+    }
+}
