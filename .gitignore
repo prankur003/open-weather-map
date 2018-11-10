@@ -3,3 +3,4 @@ reports
 selenium-debug.log
 package-lock.json
 .vagrant
+.DS_Store
