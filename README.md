@@ -45,7 +45,11 @@ Command to Execute single feature file
 ./node_modules/gulp-v4/bin/gulp.js singleFile --option features/web/acceptanceCriteria.feature
 ```
 
+
+# Report
+
 Command to generate report
 ```
 ./node_modules/gulp-v4/bin/gulp.js cucumberReports
 ```
+Then Go to `reports` folder and open `index.html`
