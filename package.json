@@ -1,0 +1,24 @@
+{
+  "name": "@my-user/my-awesome-package",
+  "version": "1.0.0",
+  "description": "A fantastic JavaScript package.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/my-user/my-awesome-package.git"
+  },
+  "keywords": [
+    "github",
+    "package",
+    "npm"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/my-user/my-awesome-package/issues"
+  },
+  "homepage": "https://github.com/my-user/my-awesome-package#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
