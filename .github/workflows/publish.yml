@@ -1,0 +1,33 @@
+name: Publish Package to GitHub Packages
+
+on:
+  release:
+    types: [created] # Trigger on new GitHub releases
+  push:
+    branches:
+      - main # Or whatever your default branch is
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # Grant write permissions to packages
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16' # Use your desired Node.js version
+          registry-url: 'https://npm.pkg.github.com/' # Configure for GitHub Packages
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Publish package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}} # Use the default GITHUB_TOKEN secret
