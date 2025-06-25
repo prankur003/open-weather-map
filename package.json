@@ -1,5 +1,5 @@
 {
-    "name": "open-weather-map-framework",
+    "name": "@prankur003/-weather-map-framework",
     "version": "1.0.0",
     "description": "This is Automation Framework for open weather map and it works with Chrome browser for Web platform. This Framework has built-in support for BDD and page object model.",
     "main": "nightwatch.conf.js",
@@ -11,6 +11,9 @@
     },
     "author": "Prankur kulshrestha <prankur003@gmail.com>",
     "license": "",
+    "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+    },
     "dependencies": {
         "chromedriver": "^2.36.0",
         "cucumber": "^4.0.0",
